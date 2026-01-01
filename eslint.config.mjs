@@ -51,6 +51,7 @@ export default antfu({
   gitignore: true,
   ignores: [
     'mise.toml',
+    'public/',
   ],
   formatters: {
     css: true, // CSS, LESS, SCSS 포맷팅 (Prettier 사용)
