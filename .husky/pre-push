@@ -1,2 +1,5 @@
+echo "🧪 Building visual test..."
+pnpm test-storybook
+
 echo "🔧 Building project..."
 pnpm build
