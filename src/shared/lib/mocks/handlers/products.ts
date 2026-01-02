@@ -69,4 +69,25 @@ export const productHandlers = [
       },
     }, { status: 201 });
   }),
+
+  // 상품 좋아요
+  http.post('/api/products/:id/favorite', ({ params }) => {
+    const { id } = params;
+    const product = mockProducts.find(p => p.id === Number(id));
+
+    if (!product) {
+      return HttpResponse.json(
+        { error: 'Product not found' },
+        { status: 404 },
+      );
+    }
+
+    return HttpResponse.json({
+      product: {
+        ...product,
+        favorited: true,
+        favoritesCount: (product.favoritesCount || 0) + 1,
+      },
+    });
+  }),
 ];
