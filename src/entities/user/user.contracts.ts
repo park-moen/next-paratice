@@ -17,6 +17,10 @@ export const RegisterRequestDtoSchema = z.object({
     .min(2, '사용자명은 최소 2자 이상이어야 합니다')
     .max(20, '사용자명은 최대 20자까지 가능합니다')
     .regex(/^\w+$/, '사용자명은 영문, 숫자, 밑줄만 가능합니다'),
+  nickname: z.string()
+    .min(2, '닉네임명은 최소 2자 이상이어야 합니다')
+    .max(20, '닉네임명은 최대 10자까지 가능합니다')
+    .regex(/^\w+$/, '닉네임명은 영문, 숫자, 밑줄만 가능합니다'),
   password: z.string()
     .min(8, '비밀번호는 최소 8자 이상이어야 합니다')
     .regex(/[A-Z]/, '비밀번호는 대문자를 포함해야 합니다')
