@@ -1,8 +1,5 @@
+import type { FetchConfig } from './api.types';
 import { ENV } from '../config/environment';
-
-type FetchConfig = RequestInit & {
-  params?: Record<string, string>;
-};
 
 class APIClient {
   private baseURL: string;
