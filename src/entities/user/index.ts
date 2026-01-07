@@ -1,3 +1,3 @@
-export { userAPI } from './user.api';
+export { UserSchema } from './user.contracts';
 export { userQueryOptions } from './user.query';
-export type { LoginRequestDto, RegisterRequestDto, User, UserResponseDto } from './user.types';
+export type { User } from './user.types';
